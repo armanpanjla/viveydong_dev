@@ -38,7 +38,7 @@ export const HomePage = () => {
                         Get Started
                     </button>
                     {/* Optional: Bottom left image hint (from your screenshot) */}
-                    <div className="mt-12 w-full h-55 bg-gray-100 overflow-hidden rounded-t-xl">
+                    <div className="mt-12 w-full h-48 bg-gray-100 overflow-hidden rounded-t-xl">
                         <img src="/secondary.png" className="w-full object-cover" />
                     </div>
                 </div>
@@ -48,7 +48,7 @@ export const HomePage = () => {
                     {/* Replace src with your actual monitor image URL */}
                     <img 
                         src="taskvivehero.png" 
-                        alt="Taskvive App on Monitor" 
+                        alt="Taskvive App on Monitor" x
                         className="w-full h-full object-cover object-center"
                     />
                 </div>
