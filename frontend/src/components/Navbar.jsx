@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
     const scroll = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({ top:0, behavior: "smooth" });
     };
 
     return (
@@ -20,7 +20,7 @@ export const Navbar = () => {
 
                 <li className="hover:border-b-2 border-black">
                     <Link to="/" onClick={scroll}>
-                        FAQ
+                        Features
                     </Link>
                 </li>
             </ul>
