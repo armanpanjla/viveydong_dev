@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { Grid, MoveRight } from "lucide-react";
 import { useState } from "react";
 import { Zap, LayoutGrid, BarChart3 } from "lucide-react";
+import {Footer} from '../components/layout/Footer' 
 
 export const HomePage = () => {
     const navigate = useNavigate();
@@ -119,7 +119,7 @@ export const HomePage = () => {
                     </div>
                 </div>
             </section>
-
+        <Footer/>
         </div>
     );
 };
