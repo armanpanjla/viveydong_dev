@@ -3,7 +3,7 @@ import {RegisterPage} from './pages/RegisterPage'
 import {HomePage} from './pages/HomePage'         // No curly braces
 import { Routes , Route} from "react-router-dom"
 import Dashboard from './pages/DashBoard'
-import { Navbar } from './components/Navbar'
+import { Navbar } from './components/layout/Navbar'
 const App = () => {
   return (
     <>

@@ -12,7 +12,7 @@ export const HomePage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-brand-blue text-gray-800 font-sans">
+        <div className="min-h-screen bg-brand-blue text-indigo-500 font-sans">
 
             {/* Navbar Placeholder (Matches the 'Taskvive' and 'Menu' in your screenshot) */}
             {/* Main Split Layout */}
@@ -27,7 +27,7 @@ export const HomePage = () => {
                     </h1>
 
                     {/* Description Text */}
-                    <p className="text-sm md:text-base text-gray-500 leading-relaxed mb-10 max-w-xs">
+                    <p className="text-sm md:text-base text-indigo-500 leading-relaxed mb-10 max-w-xs">
                         Stay organized and boost productivity with Taskvive,
                         your minimalist task management solution.
                         Experience effortless planning and tracking with our intuitive interface.
@@ -82,42 +82,42 @@ export const HomePage = () => {
             </div>
 
             {/*function section*/}
-            <section className="bg-indigo-100 font-serif m-11">
+            <section className="bg-indigo-100 font-serif text-indigo-600 ">
                 <div>
-                    <h2 className="font-serif text-4xl text-indigo-400">Why TaskVive?</h2>
-                    <h2 className="text-indigo-400  ">Everything you need to stay organized, without the clutter.</h2>
+                    <h2 className="font-serif text-4xl px-11 pt-9 text-indigo-400">Why TaskVive?</h2>
+                    <h2 className="text-indigo-400  m-11 ">Everything you need to stay organized, without the clutter.</h2>
                 </div>
-
-                <div className="flex gap-3">
-                    <div>
-                        <Zap size={24} className="mt-1 text-indigo-400" />
+                <div className="flex flex-col ml-auto w-1/2 ">
+                    <div className="flex gap-3 p-8">
+                        <div>
+                            <Zap size={24} className="mt-1 " />
+                        </div>
+                        <div>
+                            <h2>Lightning Fast</h2>
+                            <p className="pt-6">Add tasks in seconds. Our minimalist interface is built for speed, so you spend less time managing and more time doing.</p>
+                        </div>
                     </div>
-                    <div>
-                        <h2>Lightning Fast</h2>
-                        <p>Add tasks in seconds. Our minimalist interface is built for speed, so you spend less time managing and more time doing.</p>
+
+                    <div className="flex gap-3 p-8">
+                        <div className="mt-1 ">
+                            <LayoutGrid size={24} />
+                        </div>
+                        <div>
+                            <h2>Smart Organization</h2>
+                            <p className="pt-6">Automatically sort tasks by priority or deadline. Group your work into projects to keep your personal and work life separate.</p>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-3 p-8">
+                        <div className="mt-1 ">
+                            <BarChart3 size={24} />
+                        </div>
+                        <div>
+                            <h2>Insightful Analytics</h2>
+                            <p className="pt-6">Visualize your productivity. See your completion rates and peak performance hours with beautiful, simple charts.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div className="flex gap-3">
-                    <div className="mt-1 text-indigo-400">
-                        <LayoutGrid size={24} />
-                    </div>
-                    <div>
-                        <h2>Smart Organization</h2>
-                        <p>Automatically sort tasks by priority or deadline. Group your work into projects to keep your personal and work life separate.</p>
-                    </div>
-                </div>
-
-                <div className="flex gap-3">
-                    <div className="mt-1  text-indigo-400">
-                        <BarChart3 size={24} />
-                    </div>
-                    <div>
-                        <h2>Insightful Analytics</h2>
-                        <p className="ml-5">Visualize your productivity. See your completion rates and peak performance hours with beautiful, simple charts.</p>
-                    </div>
-                </div>
-
             </section>
 
         </div>
