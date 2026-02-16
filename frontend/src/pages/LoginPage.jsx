@@ -25,7 +25,8 @@ return (
   initial={{ maskImage: "linear-gradient(to right, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)" }}
   animate={{ maskImage: "linear-gradient(to right, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%)" }}
   >
-    <form  className="px-4 py-4 bg-purple-300 text-white shadow-amber-400 " onSubmit={handlesubmit}>
+    <form  className="px-4 py-4 bg-purple-300 text-white shadow-amber-400 " onSubmit={handlesubmit}> 
+
       <input
         type="email"
         name="email"
