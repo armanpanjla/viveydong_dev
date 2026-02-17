@@ -1,8 +1,5 @@
-/* eslint-disable no-unused-vars */
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
-import {motion} from 'motion/react' 
 
 export const LoginPage = () => {
   const navigate = useNavigate();
@@ -21,12 +18,8 @@ const handlesubmit = (e) => {
 
 }
 return (
-  <motion.div className="flex"
-  initial={{ maskImage: "linear-gradient(to right, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)" }}
-  animate={{ maskImage: "linear-gradient(to right, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%)" }}
-  >
-    <form  className="px-4 py-4 bg-purple-300 text-white shadow-amber-400 " onSubmit={handlesubmit}> 
-
+  <div className="bg-indigo-100 flex justify-center m-auto ">
+    <form  className="bg-indigo-300 p-16 text-3xl  text-black border-2 shadow-amber-400 " onSubmit={handlesubmit}> 
       <input
         type="email"
         name="email"
@@ -45,6 +38,6 @@ return (
       <br/>
       <button type="submit">Login</button>
     </form>
-  </motion.div>
+  </div>
 );
 };

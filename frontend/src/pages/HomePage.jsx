@@ -5,6 +5,7 @@ import {Footer} from '../components/layout/Footer'
 
 export const HomePage = () => {
     const navigate = useNavigate();
+    
     const [isExpanded, setisExpanded] = useState(false);
 
     const handleStart = () => {

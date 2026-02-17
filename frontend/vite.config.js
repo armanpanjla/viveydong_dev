@@ -5,6 +5,11 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     react({
+       server:{
+          proxy:{
+            '/api':'http://localhost:5000'
+          },
+        },
       babel: {
         plugins: [['babel-plugin-react-compiler']],
       },
