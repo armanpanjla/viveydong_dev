@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Zap, LayoutGrid, BarChart3 } from "lucide-react";
-import {Footer} from '../components/layout/Footer' 
+import { Footer } from '../components/layout/Footer'
 
 export const HomePage = () => {
     const navigate = useNavigate();
-    
+
     const [isExpanded, setisExpanded] = useState(false);
 
     const handleStart = () => {
-        navigate("/loginpage");
+        navigate("/login");
     };
 
     return (
@@ -120,7 +120,7 @@ export const HomePage = () => {
                     </div>
                 </div>
             </section>
-        <Footer/>
+            <Footer />
         </div>
     );
 };

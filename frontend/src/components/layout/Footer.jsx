@@ -1,5 +1,20 @@
 import { Facebook, Github, Instagram ,Tally1} from "lucide-react"
+import { useState } from "react";
+import { subscribeToNewsletter } from "../../../services/userService";
+
 export const Footer = () => {
+    const [email,setEmail] = useState("");
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+
+        try {
+            const response = await subscribeToNewsletter({email});
+            alert("Sucess: " + response.data.message);
+            setEmail("")
+        } catch (error) {
+            console.error("Failed to send data:", error.response?.data);
+        }
+    }; 
 
     return (
         <div className="flex md:flex-row text-indigo-500 justify-between  p-6 pt-16 bg-indigo-100">
@@ -30,15 +45,14 @@ export const Footer = () => {
             <div>
                 <h3 className="text-3xl mt-6 mb-5">Stay Connected</h3>
                 <h2 className="text-2xl">Email *</h2>
-                <form className="">
-                    <input className="border border-indigo-100 focus:outline-none focus:border-indigo-600 border-b-indigo-500" type="Email" />
+                <form onSubmit={handleSubmit}>
+                    <input className="border border-indigo-100 focus:outline-none focus:border-indigo-600 border-b-indigo-500" value={email} type="Email" onChange={(e) =>setEmail(e.target.value)}/>
                     <div className="pr-12 flex">
                         <p className="mt-3">Wanna Subscribe to newsletter</p>
-                        <button className="ml-3 rounded-full border border-indigo-500 hover:bg-indigo-200  font-bold px-6 py-2">Submit</button>
+                        <button  type="submit" className="ml-3 rounded-full border border-indigo-500 hover:bg-indigo-200  font-bold px-6 py-2">Submit</button>
                     </div>
                 </form>
             </div>
-
         </div>
     )
 }

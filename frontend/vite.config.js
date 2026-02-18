@@ -2,18 +2,23 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
-       server:{
-          proxy:{
-            '/api':'http://localhost:5000'
-          },
-        },
       babel: {
         plugins: [['babel-plugin-react-compiler']],
       },
     }),
     tailwindcss(),
   ],
+  server: {
+    proxy: {
+      // This maps any request starting with /api to your backend
+      '/api': {
+        target: 'http://localhost:5000', // Must be lowercase 't'
+        changeOrigin: true,
+      },
+    },
+  },
 })
