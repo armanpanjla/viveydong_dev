@@ -4,7 +4,7 @@ import { Signupform } from "../components/Auth/SignupForm";
 const Authpage =() =>{
 
     return(
-        <div>
+        <div className="flex justify-around">
             <LoginForm/>
             <Signupform/>
         </div>

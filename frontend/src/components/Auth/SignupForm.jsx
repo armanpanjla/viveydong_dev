@@ -13,7 +13,7 @@ export const Signupform = () => {
         e.preventDefault();
         try {
             const response = await newUser(signupData)
-            alert("USER signed up" + response.data.message)
+            alert(response.data.message)
             setSignupData({
                 name: "",
                 email: "",

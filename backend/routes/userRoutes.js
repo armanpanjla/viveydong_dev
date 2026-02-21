@@ -1,20 +1,18 @@
 import express from 'express'
+import { validateUser } from '../middleware/authMiddleware.js'
+import { loginController, registerController, subscribe } from '../controllers/authController.js';
 
 const route = express.Router();
 
+///subscribeToNewsletter
+route.post('/subscribe', validateUser, subscribe)
 
-route.post('/subscribe', (req,res) => {
-    const { email } = req.body; // This 'email' comes from the frontend
+///login
+route.post('/login', validateUser, loginController)
 
-    if (!email) {
-        return res.status(400).json({ message: "Email is required!" });
-    }
-
-    console.log("Saving email to database:", email);
-    
-    // Send a success response back to Axios
-    res.status(201).json({ message: "You are now connected!" });
-});
+///signup
+route.post('/signup', validateUser, registerController)
 
 
 export default route;
+
