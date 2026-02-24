@@ -1,7 +1,7 @@
 ///subscribe
 export const subscribe = (req, res) => {
     try {
-        console.log("email has been registered" + req.body.email)
+        console.log("email has been registered :" + req.body.email)
         res.status(200).json({ message: "email saved you will get info" })
     } catch (error) {
         return res.status(400).json({ message: "something is wrong" })
@@ -26,6 +26,6 @@ export const registerController = (req, res) => {
         console.log("user registered :" + req.body.email ,"&& user name:" +req.body.name)
         res.status(200).json({ message: "you have been registered" })
     } catch (error) {
-        return res.status(400).json({ message: "Error exe" })
+        return res.status(400).json({ message: "Error" })
     }
 }
