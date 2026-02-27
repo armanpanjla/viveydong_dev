@@ -1,3 +1,4 @@
+
 ///subscribe
 export const subscribe = (req, res) => {
     try {
@@ -11,9 +12,12 @@ export const subscribe = (req, res) => {
 //login
 
 export const loginController = (req, res) => {
+
+
     try {
         console.log("user attempting log in :", req.body.email)
         res.status(200).json({ message: "user logged in" })
+
     } catch (error) {
         return res.status(400).json({ message: "unable to log in" })
     }
@@ -23,7 +27,7 @@ export const loginController = (req, res) => {
 //register
 export const registerController = (req, res) => {
     try {
-        console.log("user registered :" + req.body.email ,"&& user name:" +req.body.name)
+        console.log("user registered :" + req.body.email, "&& user name:" + req.body.name)
         res.status(200).json({ message: "you have been registered" })
     } catch (error) {
         return res.status(400).json({ message: "Error" })
