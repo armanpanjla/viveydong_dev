@@ -1,15 +1,23 @@
-import Collection from "../models/collectionSchema"
+import Collection from "../models/collectionSchema.js"
 
-export const createCollection =async (req,res)=>{
+export const createCollection = async (req, res) => {
     try {
-        const {name, userId } = req.body;
+        const {
+            name,
+            description,
+            owner,
+        } = req.body;
         const newCollection = new Collection({
             name,
-            owner: userId,
+            description,
+            owner
         })
-        const savedCollection  =await newCollection.save();
+        const savedCollection = await newCollection.save();
         res.status(200).json(savedCollection)
     } catch (error) {
-        res.status(400).json({message:"could not save collection"})
+        console.error("COLLECTION SAVE ERROR:", error.message);
+        res.status(400).json({
+            message: error.message
+        });
     }
 }

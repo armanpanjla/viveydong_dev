@@ -1,5 +1,4 @@
-import Anime from '../models/animeSchema'
-
+import Anime from '../models/animeSchema.js'
 
 
 export const addAnimeToCollection = async (req, res) => {

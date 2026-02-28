@@ -8,9 +8,9 @@ const animeSchema = new mongoose.Schema({
         index: true
     },
 
-    colledtionId: {
+    collectionId: {
         type: mongoose.Schema.Types.ObjectId,
-        require: true,
+        required: true,
         ref: "User",
         index: true
     },
@@ -32,10 +32,10 @@ const animeSchema = new mongoose.Schema({
     //date
     releaseDay: {
         type: String,
-        Enum: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        enum: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         required: true
     },
-    baselink: {
+    baseLink: {
         type: String,
         required: true
     }

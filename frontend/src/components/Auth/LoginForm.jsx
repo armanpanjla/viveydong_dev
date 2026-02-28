@@ -12,7 +12,7 @@ export const LoginForm = () => {
         try {
             const res = await loginUser(loginData)
             alert(res.data.message);
-            navigate("/dashboard")
+            navigate("/collection")
         } catch (error) {
             console.error("Failed to log in ", error.response?.data);
         }
