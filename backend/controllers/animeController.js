@@ -13,6 +13,7 @@ export const addAnimeToCollection = async (req, res) => {
         const savedAnime = await newAnime.save();
         res.status(201).json(savedAnime);
     } catch (error) {
+        console.error("  ERROR:", error.message);
         res.status(400).json({
             message: error.message
         });

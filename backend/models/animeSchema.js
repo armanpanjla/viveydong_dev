@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const animeSchema = new mongoose.Schema({
     owner: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user",
+        ref: "User",
         required: true,
         index: true
     },
@@ -16,7 +16,7 @@ const animeSchema = new mongoose.Schema({
     },
     //info sections
 
-    tittle: {
+    title: {
         type: String,
         required: true
     },

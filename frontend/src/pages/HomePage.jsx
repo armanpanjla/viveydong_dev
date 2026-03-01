@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Zap, LayoutGrid, BarChart3 } from "lucide-react";
 import { Footer } from '../components/layout/Footer'
+import { Navbar } from "../components/layout/Navbar";
 
 export const HomePage = () => {
     const navigate = useNavigate();
@@ -13,10 +14,13 @@ export const HomePage = () => {
     };
 
     return (
+
         <div className="min-h-screen bg-brand-blue text-indigo-500 font-sans">
 
             {/* Navbar Placeholder (Matches the 'Taskvive' and 'Menu' in your screenshot) */}
             {/* Main Split Layout */}
+            <Navbar />
+
             <div className="flex flex-col md:flex-row h-screen">
 
                 {/* --- LEFT SIDE: TEXT CONTENT --- */}
