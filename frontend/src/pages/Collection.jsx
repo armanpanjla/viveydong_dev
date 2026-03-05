@@ -3,13 +3,10 @@ import  Sidebar  from "../components/layout/sidebar/Sidebar.jsx";
 
 
 export const Collection = () => {
-   
-
-
     return (
-        <div>
+        <div className="flex">
             <Sidebar/>
-            <div>
+            <div className="">
             collection
             </div>
         </div>

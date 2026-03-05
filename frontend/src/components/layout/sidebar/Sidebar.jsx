@@ -9,9 +9,11 @@ const Sidebar = () => {
 
     return (
         <div className="flex flex-col w-2/12  h-screen border">
-            <SidebarHeader/>
-            <SidebarGroup/>
-            <SidebarFooter/>
+            <aside>
+                <SidebarHeader />
+                <SidebarGroup />
+                <SidebarFooter />
+            </aside>
         </div>
     )
 }

@@ -3,9 +3,12 @@ import {
     addAnimeToCollection,
     getAnimeByFolder,
     updateEpisode,
-    getMyAnime
+    getMyAnime,
+    deleteAnime
 } from '../controllers/animeController.js';
-import {createCollection} from '../controllers/collectionController.js'
+import {
+    createCollection
+} from '../controllers/collectionController.js'
 
 const router = express.Router();
 
@@ -18,5 +21,7 @@ router.get('/folder/:folderId', getAnimeByFolder);
 router.post('/add-to-collection', addAnimeToCollection);
 
 router.patch('/update-ep/:id', updateEpisode);
+
+router.delete('/delete-anime/:id', deleteAnime);
 
 export default router;

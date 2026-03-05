@@ -113,3 +113,23 @@ export const updateEpisode = async (req, res) => {
         });
     }
 };
+
+    export const deleteAnime =async  (req,res)=>{
+        try {
+            const [id] = req.params;
+            const userId =req.body.userId;
+
+            const deletedAnime = await Anime.findOneAndDelete({
+                _id :id,
+                owner:userId
+            })
+            if (!deletedAnime){
+                res.status(404).json({message:"Unable to delete anime"})
+            }
+            res.status(200).json({message:"Anime Deleted"})
+
+
+        } catch (error) {
+            res.status(500).json({message:error.message});
+        }
+    }
