@@ -105,8 +105,7 @@ export const updateEpisode = async (req, res) => {
             }, {
                 new: true
             } // This returns the updated version of the document
-        );
-
+        );    
         res.status(200).json(updatedAnime);
     } catch (error) {
         res.status(400).json({

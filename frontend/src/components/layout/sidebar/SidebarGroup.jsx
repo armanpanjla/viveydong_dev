@@ -1,9 +1,9 @@
 import SidebarContent from "./SidebarContent";
 const SidebarGroup = () => {
     return (
-        <div>
+        <div className="border h-screen">
 
-            <h1>
+            <h1 className="border">
                 group
             </h1>
             <SidebarContent/>

@@ -1,12 +1,18 @@
 import { useState } from "react"
+import  Sidebar  from "../components/layout/sidebar/Sidebar.jsx";
 
 
-export const Collection =(e)=>{
-    e.preventDefault();
-    const [addAnime,setaddAnime] = useState("");
+export const Collection = () => {
+   
 
 
-    return {
-
-    }
+    return (
+        <div>
+            <Sidebar/>
+            <div>
+            collection
+            </div>
+        </div>
+    )
 }
+

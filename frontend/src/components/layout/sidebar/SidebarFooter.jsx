@@ -1,10 +1,12 @@
-const SidebarFooter =()=>{
+import { Github } from 'lucide-react';
+const SidebarFooter = () => {
 
-    return(
+    return (
         <div>
-            <h1>
-                Footer
-            </h1>
+            <>
+            Want source code - here it is
+            </>
+            <Github />
         </div>
     )
 }
