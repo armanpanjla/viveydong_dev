@@ -116,15 +116,16 @@ export const updateEpisode = async (req, res) => {
 
     export const deleteAnime =async  (req,res)=>{
         try {
-            const [id] = req.params;
+            const {id} = req.params;
             const userId =req.body.userId;
 
             const deletedAnime = await Anime.findOneAndDelete({
                 _id :id,
-                owner:userId
+                owner:userId,
+                collectionId :req.body.collectionId
             })
             if (!deletedAnime){
-                res.status(404).json({message:"Unable to delete anime"})
+                return res.status(404).json({message:"Unable to delete anime"})
             }
             res.status(200).json({message:"Anime Deleted"})
 

@@ -1,9 +1,8 @@
-const SidebarContent = ()=>{
-
-    return(
-        <div>
-            <h1>Content</h1>
+const SidebarContent = ({ children }) => {
+    return (
+        <div className="flex-1 overflow-y-auto custom-scrollbar">
+            {children}
         </div>
-    )
-}
+    );
+};
 export default SidebarContent;
