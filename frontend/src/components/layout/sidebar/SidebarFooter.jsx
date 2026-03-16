@@ -18,3 +18,5 @@ const SidebarFooter = () => {
     </div>
     );
 };
+
+export default SidebarFooter;
