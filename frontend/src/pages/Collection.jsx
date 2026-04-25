@@ -24,7 +24,7 @@ const Collection = () => {
                 setLoading(false);
             }
         };
-
+        
         fetchAnime();
     }, [selectedFolderId]); // <--- The trigger
 
@@ -67,6 +67,7 @@ const Collection = () => {
                         <p>Select a folder from the sidebar to view your progress.</p>
                     </div>
                 )}
+                
             </main>
         </div>
     );
